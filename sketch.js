@@ -33,11 +33,11 @@ function draw() {
 }
 
 function newX(ropelength, centerx, theta) {
-  float new_x = centerx + ropelength * (cos(radians(theta)));
+  var new_x = centerx + ropelength * (cos(radians(theta)));
   return  new_x;
 }
 
 function newY(ropelength, centery, theta) {
-  float new_y = centery + ropelength * (sin(radians(theta)));
+  var new_y = centery + ropelength * (sin(radians(theta)));
   return  new_y;
 }
