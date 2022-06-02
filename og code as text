@@ -1,0 +1,44 @@
+float x;
+float y;
+float centerx;
+float centery;
+float theta = 0;
+float ropelength = 100;
+int green = 0;
+int diameter = 50;
+
+void setup() {
+size(400,500);
+background(255);
+}
+
+void draw() {
+  centerx = width/2;
+  centery = height/2;
+  background(255);
+  fill(0,green,0);
+  circle(x,y,diameter);
+  line(centerx, centery, x, y);
+  theta += 1;
+  if (theta % 60 == 0) {
+    green += 10;
+  }
+  if (green > 255) {
+    green = 0;
+  }
+  x = newX(ropelength, centerx, theta) ;
+  y = newY(ropelength, centery, theta) ;
+}
+
+//reminder of scope. the following variables eg ropelength are 
+//at a smaller scope than the global ones. i just reused names.
+
+float newX(float ropelength, float centerx, float theta) {
+  float new_x = centerx + ropelength * (cos(radians(theta)));
+  return  new_x;
+}
+
+float newY(float ropelength, float centery, float theta) {
+  float new_y = centery + ropelength * (sin(radians(theta)));
+  return  new_y;
+}
