@@ -15,20 +15,23 @@ function setup() {
 
 function draw() {
   // put drawing code here
-  // Set the background color 
-    background(220); 
-      
-    // Use noFill() function
-    noFill();
-      
-    // Draw a circle 
-    circle(140, 100, 150);
-      
-    // Use fill() function to fill color
-    fill('green');
-      
-    // Draw a crrcle 
-    circle(240, 100, 150); 
+  centerx = width/2;
+  centery = height/2;
+  background(255);
+  //fill(0,green,0,100);
+  fill(0,100,0,100);
+  circle(x,y,diameter);
+  line(centerx, centery, x, y);
+  theta += 1;
+  if (theta % 60 == 0) {
+    green += 10;
+  }
+  if (green > 255) {
+    green = 0;
+  }
+  x = newX(ropelength, centerx, theta) ;
+  y = newY(ropelength, centery, theta) ;
+
 }
 
 function newX(ropelength, centerx, theta) {
