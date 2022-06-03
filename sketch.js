@@ -19,7 +19,7 @@ function draw() {
   centery = height/2;
   background(255);
   //fill(0,green,0,100);
-  fill(0,100,0,100);
+  fill(100,100,100,100);
   circle(x,y,diameter);
   line(centerx, centery, x, y);
   theta += 1;
