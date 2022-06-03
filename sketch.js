@@ -19,7 +19,9 @@ function draw() {
   centery = height/2;
   background(255);
   //fill(0,green,0,100);
-  fill(255,255,255,100);
+  //fill(255,255,255,100);
+  let c = color(0, 126, 255, 102);
+  fill(c);
   circle(x,y,diameter);
   line(centerx, centery, x, y);
   theta += 1;
